@@ -1,0 +1,88 @@
+body, html{
+	height: 100%;
+	margin: 0;
+	font-family: 'Dancing Script', cursive;
+	color: #777;
+}
+.image1, .image2, .image3, .image4{
+	position: relative;
+	opacity: 0.7;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.image1{
+	background-image: url("../images/2.jpg");
+	min-height: 100%;	 
+}
+.image2{
+	background-image: url("../images/1.jpg");
+	min-height: 400px;	 
+}
+.image3{
+	background-image: url("../images/3.jpg");
+	min-height: 400px;	 
+}
+.image4{
+	background-image: url("../images/4.jpg");
+	min-height: 100%;	 
+}
+.caption{
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+}
+.caption span.border{
+	font-size: 25px;
+	font-weight: bold;
+	color: #fff;
+	padding: 18px;
+	letter-spacing: 10px;
+	background: #000;
+}
+h3{
+	letter-spacing: 3px;
+	font-size: 25px;
+	color: #111;
+}
+.media{
+	padding-left: 40%;
+	display: flex;
+	flex-direction: row;
+}
+.media a{
+	width: 3.75em;
+}
+.media img{
+	width: 3.125em;
+	height: 3.125em;
+}
+/*Exapanding facebook logo when hovering over it*/
+.media>#facebook:hover{
+	transform: scale(1.5, 1.5);
+	transition: transform 0.6s ease;
+}
+/*Rotating clockwise twitter logo when hovering over it*/
+.media>#twitter:hover{
+	transform: rotate(360deg);
+	transition: transform 1.5s ease;
+}
+/*Rotating anti-clockwise linkedin logo when hovering over it*/
+.media> #linkedin:hover{
+	transform: rotate(-360deg);
+	transition: transform 1.5s ease-in-out;
+}
+/*Bending intagram logo when hovering over it*/
+.media> #instagram:hover{
+	transform: skew(-30deg, 30deg);
+	transition: transform 1s ease;
+}
+@media only screen and (max-width: 1000px){
+	.media{
+		padding-left: 0;
+	}
+}
